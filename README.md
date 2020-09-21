@@ -8,6 +8,6 @@ ENGG1110  Problem Solving by Programming
 CSCI2100  Data Structures
 
 ### 2020 Fall
-*CSCI1130  Introduction to Computing Using Java
-CSCI2040  Introduction to Python*
+CSCI1130  Introduction to Computing Using Java  
+CSCI2040  Introduction to Python
 

@@ -1,30 +1,3 @@
-/**
- * CSCI1130 Assignment 1 shaky Display
- * Aim: Get acquainted with the JDK + NetBeans programming environment
- *      Learn the structure and format of a Java program by example
- *
- * Remark: Key in class names, variable names, method names, etc. AS IS
- *        You should type also ALL the comment lines (text in gray)
- *
- * I declare that the assignment here submitted is original
- * except for source material explicitly acknowledged,
- * and that the same or closely related material has not been
- * previously submitted for another course.
- * I also acknowledge that I am aware of university policy and
- * regulations on honesty in academic work, and of the disciplinary
- * guidelines and procedures applicable to breaches of such
- * policy and regulations, as contained in the website.
- *
- * University Guideline on Academic Honesty:
- * •   http://www.cuhk.edu.hk/policy/academichonesty
- * Faculty of Engineering Guidelines to Academic Honesty:
- *   https://www.erg.cuhk.edu.hk/erg/AcademicHonesty
- *
- * Student Name: LAM Tak Hing
- * Student ID  : 1155131289
- * Date        : 14 Sep 2020
- */
-
 package exercise;
 
 import javax.swing.JFrame;
@@ -36,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * shakyDisplay Introduction to Computing: Java Assignment
  *
- * @author Michael FUNG
+ * @author ***
  * @since 14 September 2020
  */
 public class ShakyDisplay extends JFrame implements ActionListener {

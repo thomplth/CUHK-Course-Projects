@@ -3,7 +3,7 @@ index = ['first', 'second', 'third', 'fourth']
 
 for i, n in enumerate(index):
     nums[i] = input(f"Please input the {n} number: ")
-    while 1:
+    while True:
         try:
             nums[i] = float(nums[i])
             break

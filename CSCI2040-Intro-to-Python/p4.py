@@ -16,10 +16,10 @@ for count in range(1, 7):
     if guess == n:
         print("You are right after trying for {} times.Program ends.".format(count))
         break
+    elif count == 6:
+        print("You have tried 6 times and it is still wrong!The answer is {} and program ends.".format(n))
+        break
     elif guess < n:
         print("Your guess is too low!")
     elif guess > n:
         print("Your guess is too high!")
-
-    if count == 6:
-        print("You have tried 6 times and it is still wrong!The answer is {} and program ends.".format(n))

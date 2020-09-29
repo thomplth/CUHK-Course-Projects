@@ -3,9 +3,8 @@ overall, major = [0, 0, 0], [0, 0, 0]
 # [0]: grade, [1]: units, [2]: is major or not
 course = [0.0, 0, 0]
 
-while 1:
+while True:
     line = input()
-
     if line == "-1":
         break
 
@@ -18,13 +17,10 @@ while 1:
     except ValueError:
         print("Wrong input!")
         continue
-    if course[0] < 0 or course[0] >= 5.0:
+    if course[0] < 0 or course[1] < 0 or course[2] < 0 or course[0] > 5.0:
         print("Wrong input!")
         continue
-    if course[1] < 0 or course[2] < 0:
-        print("Wrong input!")
-        continue
-
+        
     # save and calculate inputs
     overall[0] += course[0] * course[1]
     overall[1] += course[1]

@@ -1,3 +1,1 @@
 python_version == '3.8.3'
-operating_system == 'macOS'
-testing_platform == 'Linux'

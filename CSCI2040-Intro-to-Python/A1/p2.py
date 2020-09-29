@@ -1,4 +1,4 @@
-while 1:
+while True:
     n = int(input("Enter an integer: "))
     if n == -1:
         break

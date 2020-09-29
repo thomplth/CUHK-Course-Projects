@@ -10,6 +10,7 @@ child.readline()
 child.sendline('012')
 test1 = child.readline().rstrip()
 cmp_str = 'No, you must input a palindrome: 012'
+print(test1)
 if (test1 == cmp_str or test1.decode() == cmp_str):
 	print ('TEST 1 OK!')
 	ok += 1

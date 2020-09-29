@@ -7,6 +7,8 @@ child = pexpect.spawn('python3 p4.py')
 child.sendline('110')
 test0 = child.readline().rstrip()
 cmp_str = 'Player 1, write down your number secretly:'
+print(test0)
+print(cmp_str)
 if (test0 == cmp_str or test0.decode() == cmp_str):
 	print ('TEST 0 OK!')
 	ok += 1
@@ -16,6 +18,8 @@ else:
 child.sendline('9')
 test1 = child.readline().rstrip()
 cmp_str = 'Player 1, invalid input, write down your number secretly:'
+print(test0)
+print(cmp_str)
 if (test1 == cmp_str or test1.decode() == cmp_str):
 	print ('TEST 1 OK!')
 	ok += 1

@@ -1,5 +1,5 @@
 # CUHK-Course-Projects
-This is a repository for all less significant projects I have worked in CUHK.
+This is a repository for all less significant projects I have worked at CUHK.
 
 ### 2019 Fall
 ENGG1110  Problem Solving by Programming

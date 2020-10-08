@@ -1,5 +1,4 @@
 # CUHK-Course-Projects
-Here includes all less significant projects I have worked at CUHK.
 
 ### 2019 Fall
 ENGG1110  Problem Solving by Programming

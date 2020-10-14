@@ -1,4 +1,4 @@
-# CUHK-Course-Projects
+# CUHK Course Projects
 
 ### 2019 Fall
 ENGG1110  Problem Solving by Programming

@@ -9,4 +9,4 @@ CSCI2100  Data Structures
 ### 2020 Fall
 CSCI1130  Introduction to Computing Using Java  
 CSCI2040  Introduction to Python  
-ESTR3504  ComputerProcessingSystemsConcepts  
+ESTR3504  Computer Processing Systems Concepts  

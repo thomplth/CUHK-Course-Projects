@@ -1,10 +1,14 @@
-while True:
-    n = int(input("Enter an integer: "))
-    if n == -1:
-        break
-    str = input("Enter a string: ")
+def roman_to_decimal(str):
+    n = 0
+    romans = {'I': 1,
+              'V': 5,
+              'X': 10,
+              'L': 50,
+              'C': 100,
+              'D': 500,
+              'M': 1000}
 
-    for i in range(1, n + 1):
-        print(" " * (n - i) * len(str) + str * i)
+    for i in str:
+        n += romans[i]
 
-print("Program ends.")
+    return n

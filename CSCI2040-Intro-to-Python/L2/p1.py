@@ -1,17 +1,13 @@
-nums = [0, 0, 0, 0]
-index = ['first', 'second', 'third', 'fourth']
+def check_sublist(list1, d1, d2):
+    d = d1 * d2
+    lista, listb, listc = [], [], []
 
-for i, n in enumerate(index):
-    nums[i] = input(f"Please input the {n} number: ")
-    while True:
-        try:
-            nums[i] = float(nums[i])
-            break
-        except ValueError:
-            print("Your input is not a number!")
-            nums[i] = input(f"Please input the {n} number: ")
+    for i in list1:
+        if i > d:
+            lista.append(i)
+        elif i < d:
+            listb.append(i)
+        if i < d1 or i < d2:
+            listc.append(i)
 
-nums.sort()
-print(f"The second smallest value is {nums[1]}")
-print(f"The second biggest value is {nums[2]}")
-print("Program ends.")
+    return lista, listb, listc

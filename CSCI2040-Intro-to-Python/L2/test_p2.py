@@ -11,6 +11,7 @@ if (os.path.isfile('p2.py')):
         try:
             print('Testing...')
             answer = list(map(roman_to_decimal, test_case))
+            print(answer)
             if answer == expected:
                 print("You passed all the tests!")
             else:

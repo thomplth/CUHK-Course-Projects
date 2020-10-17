@@ -29,6 +29,8 @@ if (os.path.isfile('p4.py')):
             # test case 4: (10, 10, 8)
             actual_ans.append(check_invalid(triangles[1]))
 
+            print(actual_ans, expected_ans)
+
             if actual_ans == expected_ans:
                 print("You passed all the tests!")
             else:

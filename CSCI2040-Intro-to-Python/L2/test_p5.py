@@ -22,6 +22,8 @@ if (os.path.isfile('p5.py')):
             actual_ans = actual_ans + list(map(p5.letter_count, test_count_string))
             expected_ans = [29, 'AlIcE wAs born In 1996 And born In London.',
                             'Alice was born in 1996 and born in London. She is 22 now.', 27, -1, [('a', 2), ('d', 1), ('e', 3), ('g', 1), ('h', 2), ('i', 4), ('j', 1), ('l', 1), ('m', 2), ('n', 2), ('o', 2), ('r', 2), ('s', 5), ('t', 6), ('u', 1), ('w', 1), ('y', 1)], [('a', 1), ('b', 1), ('c', 1), ('d', 1), ('e', 3), ('f', 1), ('g', 1), ('h', 2), ('i', 1), ('j', 1), ('k', 1), ('l', 1), ('m', 1), ('n', 1), ('o', 4), ('p', 1), ('q', 1), ('r', 2), ('s', 1), ('t', 2), ('u', 2), ('v', 1), ('w', 1), ('x', 1), ('y', 1), ('z', 1)], [('c', 3), ('d', 1), ('h', 1), ('i', 3), ('n', 3), ('o', 4), ('p', 1), ('r', 1), ('s', 1), ('t', 4), ('u', 1), ('y', 1)], [('a', 1), ('c', 2), ('e', 2), ('f', 1), ('h', 2), ('i', 1), ('j', 1), ('l', 1), ('n', 1), ('o', 2), ('p', 1), ('r', 2), ('s', 1), ('t', 1), ('u', 1)], [('a', 1), ('e', 1), ('f', 1), ('h', 1), ('n', 1), ('u', 1), ('v', 1)]]
+            print(actual_ans)
+            print(expected_ans)
             if actual_ans == expected_ans:
                 print("You passed all the tests!")
             else:

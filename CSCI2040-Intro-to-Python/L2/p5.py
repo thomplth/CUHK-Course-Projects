@@ -1,25 +1,40 @@
-key = input("Please input a palindrome: ")
-isPalindrome = False
+def count_alphabet(test_string):
+    n = 0
+    for i in test_string:
+        if i.isalpha():
+            n += 1
+    return n
 
-while not isPalindrome:
-    key = key.replace(" ", "")
-    if len(key) % 2 == 0:
-        a = int(len(key) / 2) - 1
-        b = a + 1
-    else:
-        a = int(len(key) / 2) - 1
-        b = a + 2
 
-    while a >= 0 and b < len(key):
-        if key[a] != key[b]:
-            isPalindrome = False
-            break
+def vowel_capitalization(test_string):
+    v = ('a', 'e', 'i')
+    c = ''
+    for i in test_string:
+        if i in v:
+            c += i.upper()
         else:
-            isPalindrome = True
-        a -= 1
-        b += 1
+            c += i
+    return c
 
-    if not isPalindrome:
-        key = input("No, you must input a palindrome: ")
 
-print("Welcome to the wonderland!")
+def concat(test_string, new_string):
+    return test_string + new_string
+
+
+def search(test_string, sub):
+    return test_string.rfind(sub)
+
+
+def letter_count(test_string):
+    count = {}
+    alpha = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
+    print(test_string)
+
+    for c in alpha:
+        for i in test_string:
+            if i == c or i == c.upper():
+                if c not in count.keys():
+                    count[c] = 0
+                count[c] += 1
+
+    return [(k, v) for k, v in count.items()]

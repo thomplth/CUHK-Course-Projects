@@ -15,4 +15,7 @@ def roman_to_decimal(str):
         n += romans[i]
         prev = romans[i]
 
+    if n > 9999 or n < 1:
+        return -1
+
     return n

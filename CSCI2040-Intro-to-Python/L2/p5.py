@@ -8,7 +8,7 @@ def count_alphabet(test_string):
 
 def vowel_capitalization(test_string):
     v = ('a', 'e', 'i')
-    c = ''
+    c = ""
     for i in test_string:
         if i in v:
             c += i.upper()
@@ -28,7 +28,6 @@ def search(test_string, sub):
 def letter_count(test_string):
     count = {}
     alpha = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')
-    print(test_string)
 
     for c in alpha:
         for i in test_string:

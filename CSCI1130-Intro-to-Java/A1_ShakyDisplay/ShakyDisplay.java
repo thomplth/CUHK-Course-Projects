@@ -185,18 +185,10 @@ public class ShakyDisplay extends JFrame implements ActionListener {
 
         // example name: NAME
         int c = 0;
-        buttons[height - 1][c++].setText("L");
+        buttons[height - 1][c++].setText("N");
         buttons[height - 1][c++].setText("A");
         buttons[height - 1][c++].setText("M");
-        buttons[height - 1][c++].setText(" ");
-        buttons[height - 1][c++].setText("T");
-        buttons[height - 1][c++].setText("A");
-        buttons[height - 1][c++].setText("K");
-        buttons[height - 1][c++].setText(" ");
-        buttons[height - 1][c++].setText("H");
-        buttons[height - 1][c++].setText("I");
-        buttons[height - 1][c++].setText("N");
-        buttons[height - 1][c++].setText("G");
+        buttons[height - 1][c++].setText("E");
     }
 
     /**

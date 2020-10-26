@@ -1,21 +1,12 @@
-def roman_to_decimal(str):
-    n = 0
-    prev = 1000
-    romans = {'I': 1,
-              'V': 5,
-              'X': 10,
-              'L': 50,
-              'C': 100,
-              'D': 500,
-              'M': 1000}
+def quicksort(a):
+    if not a:
+        return []
 
-    for i in str:
-        if prev < romans[i]:
-            n -= prev * 2
-        n += romans[i]
-        prev = romans[i]
+    p = (0 + len(a) - 1) // 2
+    n = a.pop(p)
 
-    if n > 9999 or n < 1:
-        return -1
+    low = quicksort([x for x in a if x < n])
+    high = quicksort([y for y in a if y >= n])
+    result = low + [n] + high
 
-    return n
+    return result

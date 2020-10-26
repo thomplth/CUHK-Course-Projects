@@ -1,6 +1,14 @@
-def check_sublist(list1, d1, d2):
-    lista = [x for x in list1 if x > d1 * d2]
-    listb = [y for y in list1 if y < d1 * d2]
-    listc = [z for z in list1 if z < d1 or z < d2]
+def non_unique(list):
+    result = []
+    appear = {}
 
-    return lista, listb, listc
+    for i in list:
+        if i not in appear.keys():
+            appear[i] = 0
+        appear[i] += 1
+
+    for i in appear.keys():
+        if appear[i] > 1:
+            result.extend([i, appear[i]])
+
+    return result

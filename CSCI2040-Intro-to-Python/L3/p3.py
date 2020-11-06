@@ -37,7 +37,6 @@ def update():
 
 
 def get_num_of_followers():
-    update()
     result = load_data("followers-updated.pydata")
     for k in result.keys():
         result[k] = len(result[k])

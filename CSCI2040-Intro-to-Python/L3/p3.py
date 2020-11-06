@@ -16,9 +16,8 @@ def query_following(user_name):
     user_dict = load_data("followers.pydata")
     result = 0
     for l in user_dict.values():
-        for i in l:
-            if i == user_name:
-                result += 1
+        if user_name in l:
+            result += 1
     return result
 
 
@@ -32,7 +31,6 @@ def update():
         f = open('followers-updated.pydata', 'wb')
         pickle.dump(user_dict, f)
         f.close()
-
     except Exception as e:
         print(e)
         print("File not stored")

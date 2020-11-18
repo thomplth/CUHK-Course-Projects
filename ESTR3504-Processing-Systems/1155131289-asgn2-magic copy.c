@@ -51,48 +51,24 @@ int main(int argc, char *argv[])
     
     // task 3: card display randomness
     srand((unsigned)time(&t));
-    int first[6], second[6];
     int hidden = rand() % 12;
-    
-    if (hidden % 4 < 2) {
-        first[0] = 0;
-        first[1] = 1;
-        first[2] = 4;
-        first[3] = 5;
-        first[4] = 8;
-        first[5] = 9;
-    } else {
-        first[0] = 2;
-        first[1] = 3;
-        first[2] = 6;
-        first[3] = 7;
-        first[4] = 10;
-        first[5] = 11;
-    }
-    
-    for (i = 0; i < 12; i++) {
-        if (i == hidden) continue;
-        int inFirst = 0;
-        for (j = 0; j < 6; j++) {
-            if (i == first[j]) {
-                inFirst = 1;
-                break;
-            }
-        }
-        if (!inFirst) {
-            second[k++] = i;
-        }
-    }
+    int hiddenK = hidden % 4;
+    int hiddenN = hidden / 4;
     
     /* para 1 */
     fgets(l1, 1000, cnt); fgets(l2, 1000, cnt); fgets(l3, 1000, cnt);
     strcpy(msg, l1); strcat(msg, l2); strcat(msg, l3);
     display_text(msg,50,50);
     
-    for (i = 0; i < 6; i++) {
-//        printf("%d\n", first[i])
-        display_card(i, first[i]);
+    for (i = 2; i < 4; i++) {
+        for (j = 0; j < 3; j++) {
+            int cardNo = ((hiddenK+i)%4) + 4 * ((hiddenN+j)%3);
+//            printf("%d\n", cardNo);
+            display_card(k++, cardNo);
+        }
     }
+    k = 0;
+//    printf("\n");
     
     wait_keypress();
     fgets(msg, 1000, cnt);
@@ -131,9 +107,14 @@ int main(int argc, char *argv[])
     fgets(l1, 1000, cnt);
     display_text(l1,50,50);
     
-    for (i = 0; i < 5; i++) {
-        printf("%d\n", second[i]);
-        display_card(i, second[i]);
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            int cardNo = ((hiddenK+i)%4) + 4 * ((hiddenN+j)%3);
+//            printf("%d\n", cardNo);
+            if (cardNo != hidden) {
+                display_card(k++, cardNo);
+            }
+        }
     }
     
     wait_keypress();
@@ -164,3 +145,4 @@ int main(int argc, char *argv[])
     
     return 0;
 }
+

@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
     int first[6], second[6];
     int hidden = rand() % 12;
     
-    if (hidden % 4 < 2) {
+    if (hidden % 4 > 2) {
         first[0] = 0;
         first[1] = 1;
         first[2] = 4;
@@ -90,7 +90,6 @@ int main(int argc, char *argv[])
     display_text(msg,50,50);
     
     for (i = 0; i < 6; i++) {
-//        printf("%d\n", first[i])
         display_card(i, first[i]);
     }
     
@@ -132,7 +131,6 @@ int main(int argc, char *argv[])
     display_text(l1,50,50);
     
     for (i = 0; i < 5; i++) {
-        printf("%d\n", second[i]);
         display_card(i, second[i]);
     }
     
@@ -164,3 +162,4 @@ int main(int argc, char *argv[])
     
     return 0;
 }
+

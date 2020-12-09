@@ -1,0 +1,26 @@
+Script started on Thu Dec 10 03:15:02 2020
+sepc546:/uac/spc/course/c5131289/proj1[21]> cat makefile
+main: main.o highlow.o gui.o
+	gcc -o main main.o highlow.o gui.o `pkg-config --cflags --libs gtk+-3.0`
+
+main.o: main.c gui.h
+	gcc `pkg-config --cflags gtk+-3.0` -c main.c
+
+highlow.o: highlow.c gui.h
+	gcc `pkg-config --cflags gtk+-3.0` -c highlow.c
+
+gui.o: gui.c gui.h
+	gcc `pkg-config --cflags gtk+-3.0` -c gui.c
+sepc546:/uac/spc/course/c5131289/proj1[22]> make
+gcc `pkg-config --cflags gtk+-3.0` -c main.c
+gcc `pkg-config --cflags gtk+-3.0` -c highlow.c
+gcc `pkg-config --cflags gtk+-3.0` -c gui.c
+gcc -o main main.o highlow.o gui.o `pkg-config --cflags --libs gtk+-3.0`
+sepc546:/uac/spc/course/c5131289/proj1[23]> make[K[K[K[K./main 
+
+(main:546): Gtk-[1;33mWARNING[0m **: [34m03:16:01.989[0m: Locale not supported by C library.
+	Using the fallback 'C' locale.
+Fontconfig warning: ignoring UTF-8: not a valid region tag
+sepc546:/uac/spc/course/c5131289/proj1[24]> ^Dexit
+
+Script done on Thu Dec 10 03:16:37 2020
